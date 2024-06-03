@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Display Control Times</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Control Times</h1>
+    <h3> {{brevet}}km ACP BREVET<br>Begins on {{begin_date}} at {{begin_time}}</h3>
+    
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Miles</th>
+                <th>Km</th>
+                <th>Open Time</th>
+                <th>Close Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.miles }}</td>
+                <td>{{ item.km }}</td>
+                <td>{{ item.open }}</td>
+                <td>{{ item.close }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
