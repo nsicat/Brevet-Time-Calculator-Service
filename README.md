@@ -107,6 +107,10 @@ This functionality added in this project is determining the opening and closing 
     * this is a command used to start Docker containeres as defined in the docker-compose.yml file
 4. The website should be up for usage
 
+5. Go to localhost:8000
+6. Input values and hit submit (do not hit display because this will display values and erase the database)
+7. Go to localhost:5002 and follow instructions from "Functionality Added" to see representations
+
 ### How to Stop:
 * docker compose down
 
