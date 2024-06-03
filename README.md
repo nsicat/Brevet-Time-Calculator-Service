@@ -2,6 +2,12 @@
 
 Simple listing service from project 5 stored in MongoDB database.
 
+# Author:
+
+Code given in CS322 class
+
+Edited by Nico Sicat "nsicat@uoregon.edu"
+
 ## What is in this repository
 
 Minimal implementation of Docker compose in DockerRestAPI folder, using which can create REST API-based services
