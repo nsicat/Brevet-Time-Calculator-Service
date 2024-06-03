@@ -103,18 +103,18 @@ class handle_functionalities(Resource):
     #return as csv
     def format_csv(self, documents, fields, begin_time, begin_date, brevet_distance):
         csv_format = ''
-        header = ''
+        
 
-        header += f"brevets/distance, brevets/begin_date, brevets/begin_time, "
+        csv_format += f"brevets/distance, brevets/begin_date, brevets/begin_time, "
         for i in range(len(documents)):
             for field in fields:
-                header += f"brevets/{i}/{field}, "
-        csv_format += header + '\n '
+                csv_format += f"brevets/{i}/{field}, "
+        csv_format += '\n '
 
 
         csv_format += f"{brevet_distance}, {begin_date}, {begin_time}, "
         for doc in documents:
-            csv_format += ', '.join([str(doc.get(field, '')) for field in fields]) 
+            csv_format += ', '.join([str(doc.get(field, '')) for field in fields]) + ', '
 
         return csv_format
     
