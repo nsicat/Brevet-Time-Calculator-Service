@@ -103,14 +103,12 @@ class handle_functionalities(Resource):
     #return as csv
     def format_csv(self, documents, fields, begin_time, begin_date, brevet_distance):
         csv_format = ''
-        
 
         csv_format += f"brevets/distance, brevets/begin_date, brevets/begin_time, "
         for i in range(len(documents)):
             for field in fields:
                 csv_format += f"brevets/{i}/{field}, "
         csv_format += '\n '
-
 
         csv_format += f"{brevet_distance}, {begin_date}, {begin_time}, "
         for doc in documents:
@@ -128,7 +126,6 @@ class list_all(handle_functionalities):
         begin_time = brevet_info['begin_time']
         begin_date = brevet_info['begin_date']
         brevet_distance = brevet_info['brevet_distance']
-
 
         documents = self.get_documents("open", limit)
         fields = ['open', 'close']  # Specify the fields you need
@@ -150,7 +147,6 @@ class list_open_only(handle_functionalities):
         begin_time = brevet_info['begin_time']
         begin_date = brevet_info['begin_date']
         brevet_distance = brevet_info['brevet_distance']
-
 
         documents = self.get_documents("open", limit)
         fields = ['open']
